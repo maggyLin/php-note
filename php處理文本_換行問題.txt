@@ -1,0 +1,16 @@
+PHP處理textarea post上来的文本的換行(回車)符號等等
+
+1.nl2br()
+函数在字符串中的每个新行（\n）之前插入 HTML 换行符（<br />）。
+但是（\n）還是存在
+
+2. $str = str_replace(PHP_EOL, "", $str);
+PHP_EOL，代表PHP的换行符，直接取代為空值
+-> 換行符號會被取代
+
+!!注意使用"" 不要使用''
+
+***
+換行平台不同而不同，在Windows下是\r\n，Linux下是\n，而Mac下是\r
+所以取代請使用 方法2 , 自己寫的
+$str = str_replace(array("\r", "\n", "\r\n"), '', $str)

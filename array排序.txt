@@ -1,0 +1,8 @@
+
+http://n.sfs.tw/content/index/11470
+
+//php 2維array 排序
+
+usort($data, function($a, $b) {
+	return $a['created_time'] - $b['created_time'];
+});
